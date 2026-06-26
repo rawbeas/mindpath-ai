@@ -1,0 +1,29 @@
+# ── Python ────────────────────────────────────────────────────
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ── Secrets — NEVER commit these ──────────────────────────────
+.env
+.env.local
+.env.production
+backend/firebase-service-account.json
+*-service-account.json
+
+# ── Node / Next.js ────────────────────────────────────────────
+node_modules/
+.next/
+npm-debug.log*
+
+# ── HuggingFace model cache (large, re-downloads automatically)
+.cache/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp

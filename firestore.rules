@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // All Firestore access goes through the FastAPI backend using the
+    // Admin SDK, which bypasses these rules entirely. Direct browser
+    // access (e.g. the Firebase JS SDK talking to Firestore) is blocked
+    // for every collection and every document. This is intentional —
+    // the privacy boundary between student and counsellor data is
+    // enforced at the API layer, not here, and allowing direct browser
+    // access would bypass that boundary.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
