@@ -51,33 +51,43 @@ models for the same database document — not just by convention.
 
 ---
 
-## Step 2 — Unzip the project
+## Step 2 — Get the project onto your computer
 
-**Windows**: right-click the zip → **Extract All** → choose a location → Extract.  
-**Mac**: double-click the zip.
+**Option A — Download the ZIP (easiest):**
 
-You get a `mindpath-ai/` folder with three things inside:
+Go to the GitHub repo → click the green **Code** button → **Download ZIP**.
+
+- Windows: right-click the downloaded zip → **Extract All** → choose a location → **Extract**
+- Mac: double-click the zip — it extracts automatically
+
+If you see a folder named `mindpath-ai-main` inside another `mindpath-ai-main`, go one level deeper — the inner one is the real project root.
+
+**Option B — Git clone:**
+
+```
+git clone https://github.com/YOUR_USERNAME/mindpath-ai.git
+cd mindpath-ai
+```
+
+Either way, you should end up with a folder containing:
 
 ```
 mindpath-ai/
-  backend/          ← Python / FastAPI
-  frontend/         ← Next.js
-  README.md         ← this file
+  backend/
+  frontend/
+  README.md
   firebase.json
   firestore.indexes.json
   firestore.rules
 ```
 
-If you see a `mindpath-ai/mindpath-ai/` double-nesting, go one level deeper — the
-inner folder is the real one.
-
-In your terminal, navigate into it:
+Navigate into that folder in your terminal:
 
 ```
 cd path/to/mindpath-ai
 ```
 
-(Replace `path/to` with wherever you extracted it.)
+(Replace `path/to` with wherever you extracted or cloned it.)
 
 ---
 
